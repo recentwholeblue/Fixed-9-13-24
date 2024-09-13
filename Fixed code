@@ -1,0 +1,48 @@
+def calcTotal(grades, bonus):  
+    total = 0
+    for grade in grades:  
+        if isinstance(grade, (int, float)):  #Set grade to number
+            total += grade + bonus  
+    return total
+
+def calcAverage(total, count):  
+    return total / count  
+
+studentNames = ["John", "Mike", "Alice", "Lily"]  #removed int
+studentGrades = [85, 92, 78, 88, 90]  #Set to one data type
+
+bonusValue = 5  
+
+totalGrades = calcTotal(studentGrades, bonusValue)  
+averageGrade = calcAverage(totalGrades, len(studentGrades))
+
+print(f"Total grades for the class: {totalGrades}")
+print(f"Average grade for the class: {averageGrade}")
+
+def gameScore(player1, player2):  
+    return player1 + player2
+
+player1Score = int("5")  #Str to int
+player2Score = 10
+gameScores = []  
+
+for i in range(1, 10):  #Fixed range
+    gameScores.append(gameScore(player1Score, player2Score)) 
+
+print("Game scores:", gameScores)
+
+inventoryItems = ["Apples", "Bananas", "Oranges", "Grapes"]  #Set to one data type
+inventoryQty = [50, 25, 30, 10]  #Set to one data type
+
+for item, qty in zip(inventoryItems, inventoryQty):  #Combine quantity and item name
+    print(f"Item: {item}, Quantity: {qty}")
+
+for i in range(len(inventoryQty)):
+    if inventoryQty[i] > 20:  
+        inventoryQty[i] -= 5  
+
+storeName = "SuperMart"
+storeID = 12345
+
+storeInfo = storeName + " has store ID: " + str(storeID)  #Convert store id to string
+print(storeInfo)
