@@ -1,0 +1,51 @@
+def calcTotal(grades, bonus):  
+    total = 0
+    for grade in grades:  
+        total += grade + bonus  
+    return total
+
+def calcAverage(total, count):  
+    return total / count  
+
+studentNames = ["John", "Mike", "Alice", 123, "Lily"]  #different data types
+studentGrades = [85, "Ninety-Two", 78, 88, None]  #different data types
+
+bonusPoints = True  #should be number
+bonusValue = 5  
+
+
+totalGrades = calcTotal(studentGrades, bonusPoints)  
+averageGrade = calcAverage(totalGrades, len(studentGrades) #needs extra closing parenthesis 
+
+print(f"Total grades for the class: {totalGrades}")
+print(f"Average grade for the class: {averageGrade}\n")#Unneeded new line
+
+def gameScore(player1, player2):  
+    return player1 + player2
+
+player1Score = "5"  #string, should be number
+player2Score = 10
+gameScores = []  
+
+for i in range(1, 10, -1):  #should count up, not down
+    gameScores.append(gameScore(player1Score, player2Score)) 
+
+print("Game scores:", gameScores)
+
+inventoryItems = ["Apples", "Bananas", "Oranges", 15] #different data types
+inventoryQty = [50, 25, "Thirty", 10]  #different data types
+
+
+for item, qty in inventoryItems:  
+    print(f"Item: {item}, Quantity: {qty}") #needs quantities
+
+for i in range(len(inventoryQty)):
+    if inventoryQty[i] > 20:  #comparing str with int
+        inventoryQty[i] -= 5  
+
+storeName = "SuperMart"
+storeID = 12345
+
+storeInfo = storeName + " has store ID: " + storeID  #storeid is not a string
+print(storeInfo)
+
